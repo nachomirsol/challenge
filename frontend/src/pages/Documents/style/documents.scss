@@ -1,0 +1,27 @@
+@import "styles/styles-utils.scss";
+
+.documents{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width:100%;
+    padding: $spacing-xxl;
+    &__title{
+        color: $background-light;
+    }
+    &__content{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        &-item{
+            width:100%;
+            background-color: $background-light;
+            padding:$spacing-m;
+            margin:$spacing-s 0;
+            height:48px;
+            font-weight: $font-weight-bold;
+            color: $background-blue;
+        }
+    }
+    
+}

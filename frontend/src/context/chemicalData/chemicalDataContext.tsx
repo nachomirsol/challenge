@@ -7,7 +7,7 @@ export type ChemicalData = {
   chemical_type: string;
 }
 
-interface IContextTypes {
+type ContextTypes = {
   query: string;
   chemicalData: ChemicalData[];
   chemicalDataFiltered: ChemicalData[];
@@ -51,6 +51,4 @@ const initialContextValues  = {
   getAllDocsByChemicalType2: () => ({}),
 }
 
-
-
-export const ChemicalDataContext = React.createContext<IContextTypes>(initialContextValues)
+export const ChemicalDataContext = React.createContext<ContextTypes>(initialContextValues)

@@ -20,7 +20,11 @@ import {
     FILTER_CHEMICAL_DATA_2,
 } from "./types";
 
-export const ChemicalDataState = ({ children }: any) => {
+type chemicalDataStateProps = {
+    children: React.ReactNode
+}
+
+export const ChemicalDataState = ({ children }: chemicalDataStateProps) => {
     const initialState = {
         query: "",
         chemicalData: [],

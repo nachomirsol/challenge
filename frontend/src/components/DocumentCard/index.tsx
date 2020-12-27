@@ -1,6 +1,6 @@
 import React from "react";
 /** Types */
-import { DocumentCardProps} from "./types";
+import { DocumentCardProps } from "./types";
 /** Style */
 import "./style/documentCard.scss";
 

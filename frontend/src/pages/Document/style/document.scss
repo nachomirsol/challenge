@@ -1,11 +1,11 @@
 @import "styles/styles-utils.scss";
-.documents {
+
+.document {
     height: 100%;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: $spacing-xxl;
     &__title {
         color: $background-light;
     }
@@ -17,7 +17,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        max-height: 400px;
+        max-height: 500px;
         overflow-y: auto;
         background-color: $background-light;
         thead {
