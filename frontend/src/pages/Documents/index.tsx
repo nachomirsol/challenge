@@ -16,6 +16,10 @@ import { BASE_URL_API } from "constants/urls";
 /** Styles */
 import "./style/documents.scss";
 
+
+const WINDOW_HEIGHT = 800;
+const ITEM_HEIGHT = 100;
+
 export const Documents = () => {
 
     const [isModalOpen, setModalIsOpen] = useState(false);
@@ -59,8 +63,8 @@ export const Documents = () => {
                             ?   (
                                     <VirtualizedList
                                         numItems={data.length}
-                                        itemHeight={100}
-                                        windowHeight={800}
+                                        itemHeight={ITEM_HEIGHT}
+                                        windowHeight={WINDOW_HEIGHT}
                                         renderItem={({ index, style }: VirtualizedRenderItemParams) => {
                                             const i = data[index];
                                             return (
