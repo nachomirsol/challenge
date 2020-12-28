@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, CSSProperties } from "react";
 /** Components */
 import { Spinner } from "components/Spinner";
 import { VirtualizedList } from "components/VirtualizedList";
@@ -7,6 +7,8 @@ import { Modal } from "components/Modal";
 import { Layout } from "containers/Layout";
 /** Hooks */
 import { useFetchData } from "hooks/useFetchData";
+/** Types */
+import { VirtualizedRenderItemParams } from "./types"
 /** Constants */
 import { FETCHED, FETCHING, ERROR } from "constants/api";
 import { DOCUMENTS_PAGE_TITLE, MODAL_HEADER_INFO, MODAL_BUTTON_CANCEL, MODAL_BODY_INFO } from "constants/texts";
@@ -57,15 +59,15 @@ export const Documents = () => {
                             ?   (
                                     <VirtualizedList
                                         numItems={data.length}
-                                        itemHeight={40}
-                                        windowHeight={400}
-                                        renderItem={({ index, style }:any) => {
+                                        itemHeight={100}
+                                        windowHeight={800}
+                                        renderItem={({ index, style }: VirtualizedRenderItemParams) => {
                                             const i = data[index];
                                             return (
                                                 <div 
-                                                    key={i.name} 
+                                                    key={i.id} 
                                                     className="item" 
-                                                    style={style} 
+                                                    style={style as CSSProperties} 
                                                     onClick={() => setModalIsOpen(true)}
                                                 >
                                                     
