@@ -1,0 +1,52 @@
+@import "styles/styles-utils.scss";
+
+.documents{
+    display:flex;
+    flex-direction:column;
+    height:100vh;
+    width:100%;
+    padding: $spacing-xxl;
+    &__title{
+        color: $background-light;
+    }
+    &__content{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-around;
+        align-items:center;
+        &-item-wrapper{
+            display:flex;
+            align-items:center;
+            width:100%;
+            background-color: $background-light;
+            padding:$spacing-m;
+            margin:$spacing-s 0;
+            height:48px;
+            font-weight: $font-weight-bold;
+            color: $background-blue;
+        }
+        .scroll{
+            height:100vh;
+            width:100%;
+           .item{
+                display:flex;
+                cursor:pointer;
+                align-items:center;
+                width:100%;
+                background-color: $background-light;
+                padding:$spacing-m;
+                height:48px;
+                font-weight: $font-weight-bold;
+                color: $background-blue;
+                .item-index{
+                    height:100%;
+                    padding:0 $spacing-l;
+                    border:4px solid $background-blue;
+                    font-size:$font-size-xxl;
+                    margin:0 $spacing-s;
+                }
+            }
+        }
+    }
+    
+}

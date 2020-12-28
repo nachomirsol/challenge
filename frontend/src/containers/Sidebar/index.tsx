@@ -30,6 +30,7 @@ export const Sidebar = () => {
                 <Link to="/">{ TEXT_TITLE_SIDEBAR }</Link>
             </div>
             <div className="sidebar__list" onClick={clearChemicalData}>
+                    <SidebarItem url="/documents" text="Documents"/>
                     <SidebarItem url="/about" text="About"/>
             </div>
             <div className="sidebar__logout" onClick={logout}>

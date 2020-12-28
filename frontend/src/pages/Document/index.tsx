@@ -22,15 +22,15 @@ export const Document = () => {
 
     return(
         <Layout>
-            <div className="documents">
-                <div className="documents__title">
+            <div className="document">
+                <div className="document__title">
                     <h2>{DOCUMENTS_PAGE_TITLE}</h2>
                 </div>
-                <div className="documents__searched">
+                <div className="document__searched">
                     {/* @ts-ignore */}
                     <span>{history.location.state}</span>
                 </div>
-                <div className="documents__content">
+                <div className="document__content">
                     <BasicTable 
                         data={chemicalTypeDocs} 
                         tableColumnTitles={tableColumnTitlesDocsKeys} 
@@ -40,7 +40,7 @@ export const Document = () => {
                         objectProperties={tableColumnTitlesDocsKeys}
                     />
                 </div>
-                <div className= "documents__button">
+                <div className= "document__button">
                     <Button textButton={GO_BACK_TEXT_BUTTON} onClickedButton={() => history.push("/")}/>
                 </div>
             </div>

@@ -22,7 +22,15 @@
         a {
             padding: $spacing-s 0;
             color: $gray;
+            text-decoration:none;
+            .sidebar-list-item{
+                &--selected{
+                    color:$background-blue;
+                    font-weight:$font-weight-bold;
+                }
+            }
         }
+
     }
     &__logout {
         padding: $spacing-s;

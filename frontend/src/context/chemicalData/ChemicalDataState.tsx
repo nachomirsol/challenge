@@ -20,20 +20,23 @@ import {
     FILTER_CHEMICAL_DATA_2,
 } from "./types";
 
-export const ChemicalDataState = ({ children }: any) => {
+type chemicalDataStateProps = {
+    children: React.ReactNode
+}
+
+export const ChemicalDataState = ({ children }: chemicalDataStateProps) => {
     const initialState = {
         query: "",
         chemicalData: [],
         chemicalDataFiltered: [],
         chemicalData2: [],
         chemicalData2Filtered: [],
-        chemicalDataElement: null,
         chemicalTypeDocs: [],
         chemicalTypeDocs2: [],
     };
 
     const [state, dispatch] = useReducer(chemicalDataReducer, initialState);
-
+    
     // GET CHEMICAL DATA TABLE 1
     const getChemicalData = async (query: string) => {
         const res = await getChemicalTypes(query);
@@ -127,7 +130,6 @@ export const ChemicalDataState = ({ children }: any) => {
                 chemicalDataFiltered: state.chemicalDataFiltered,
                 chemicalData2: state.chemicalData2,
                 chemicalData2Filtered: state.chemicalData2Filtered,
-                chemicalDataElement: state.chemicalDataElement,
                 chemicalTypeDocs: state.chemicalTypeDocs,
                 chemicalTypeDocs2: state.chemicalTypeDocs2,
                 query: state.query,
