@@ -52,7 +52,7 @@ export const BasicTable = ({ data, tableColumnTitles, onClickTableHeader, onClic
                 <th key={index}>
                     <div>{key}</div>
                     <div onClick={() => onClickTableHeader(key)}>
-                       {<FontAwesomeIcon icon={orderParam === key && isOrdered? faSortUp : faSortDown} />} 
+                       {<FontAwesomeIcon icon={orderParam === key && isOrdered ? faSortUp : faSortDown} />} 
                     </div>
                 </th>
            );

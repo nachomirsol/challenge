@@ -7,13 +7,12 @@ export type ChemicalData = {
   chemical_type: string;
 }
 
-interface IContextTypes {
+type ContextTypes = {
   query: string;
   chemicalData: ChemicalData[];
   chemicalDataFiltered: ChemicalData[];
   chemicalData2: ChemicalData[];
   chemicalData2Filtered: ChemicalData[];
-  chemicalDataElement: null;
   chemicalTypeDocs: ChemicalData[];
   chemicalTypeDocs2: ChemicalData[];
   getChemicalData: (query: string) => void;
@@ -35,7 +34,6 @@ const initialContextValues  = {
   chemicalDataFiltered: [],
   chemicalData2: [],
   chemicalData2Filtered: [],
-  chemicalDataElement: null,
   chemicalTypeDocs: [],
   chemicalTypeDocs2: [],
   getChemicalData: () => ({}),
@@ -51,6 +49,4 @@ const initialContextValues  = {
   getAllDocsByChemicalType2: () => ({}),
 }
 
-
-
-export const ChemicalDataContext = React.createContext<IContextTypes>(initialContextValues)
+export const ChemicalDataContext = React.createContext<ContextTypes>(initialContextValues)

@@ -1,3 +1,4 @@
+/** Reducer types */
 import {
     GET_CHEMICAL_DATA,
     GET_CHEMICAL_DATA_2,
@@ -11,9 +12,12 @@ import {
     GET_CHEMICAL_ELEMENT,
 } from "./types";
 
+/** types */
+import { ActionReducer, StateReducer } from "./types/index";
+/** Utils */
 import { dynamicSort } from "utils/functions";
 
-export const chemicalDataReducer = (state:any, action:any) => {
+export const chemicalDataReducer = (state:StateReducer, action: ActionReducer) => {
     switch (action.type) {
         case GET_CHEMICAL_DATA:
             return {
