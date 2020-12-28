@@ -13,7 +13,6 @@ type ContextTypes = {
   chemicalDataFiltered: ChemicalData[];
   chemicalData2: ChemicalData[];
   chemicalData2Filtered: ChemicalData[];
-  chemicalDataElement: null;
   chemicalTypeDocs: ChemicalData[];
   chemicalTypeDocs2: ChemicalData[];
   getChemicalData: (query: string) => void;
@@ -35,7 +34,6 @@ const initialContextValues  = {
   chemicalDataFiltered: [],
   chemicalData2: [],
   chemicalData2Filtered: [],
-  chemicalDataElement: null,
   chemicalTypeDocs: [],
   chemicalTypeDocs2: [],
   getChemicalData: () => ({}),
