@@ -19,7 +19,7 @@ export const VirtualizedList = ({ numItems, itemHeight, renderItem, windowHeight
             renderItem({
                 index: i,
                 style: {
-                    position: "relative",
+                    position: "absolute",
                     top: `${i * itemHeight}px`,
                     width: "100%"
                 }
@@ -32,7 +32,7 @@ export const VirtualizedList = ({ numItems, itemHeight, renderItem, windowHeight
     return (
       <div className="scroll" style={{ overflowY: "scroll" }} onScroll={onScroll}>
             <div
-                className="inner"
+                className="totalWindowListHeight"
                 style={{ position: "relative", height: `${innerHeight}px` }}
             >
                 {items}
